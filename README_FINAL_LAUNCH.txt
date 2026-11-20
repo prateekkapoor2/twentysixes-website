@@ -20,10 +20,10 @@ FAVICON / APP ICONS
 TS favicon SVG and ICO, PNG exports (16, 32, 48, 64, 128, 180, 192, 256, 512), and Apple touch icon are included. Website head links reference the SVG, ICO and Apple icon.
 
 CONTACT FORM LIMITATION
-The enquiry form validates fields and opens the visitor's email application with a prepared message addressed to hello@twentysixes.com. The website does not transmit or store submissions. Visitors without a configured email application can use the direct email link. Add a form backend only if a server-side submission flow is wanted.
+The enquiry form submits directly to Formspree endpoint xgakzgqq using an asynchronous POST. Formspree is configured to forward submissions to hello@twentysixes.com. The form includes required-field validation, consent, a honeypot and success/error feedback. Verify the Formspree account's recipient confirmation and notification settings before launch.
 
 CALENDLY
-No booking URL was supplied. The script has an empty CALENDLY_URL setting; no fake or placeholder booking link is published. Add the real https://calendly.com/... event URL when available.
+The contact section includes one external booking link: https://calendly.com/pk-twentysixes/30min. The calendar is not embedded on the website.
 
 DEPLOYMENT
 Deploy the contents of this package's website root (index.html, privacy.html, styles.css, script.js, assets/, brand-assets/) to Cloudflare Pages via the GitHub repository. Do not upload the ZIP itself as the site.
@@ -33,7 +33,7 @@ PRE-LAUNCH
 2. Confirm DNS records for Google Workspace MX, SPF, DKIM and DMARC remain correct.
 3. Confirm hello@twentysixes.com is live and receives messages.
 4. Supply Calendly URL if desired.
-5. Test email draft behaviour on iOS, Android and desktop mail clients.
+5. Test Formspree submission and inbox delivery on desktop and mobile.
 6. Review legal/privacy details and confirm business information before public launch.
 
 IDENTITY / CONTENT
@@ -42,3 +42,7 @@ Twenty Sixes Media — Independent Creative & Content Studio. Tagline: Creators.
 
 FAVICON UPDATE (20 Nov 2026)
 The active favicon and all browser, Apple and Android icon exports use the approved cream (#f3f1eb) background with the black/orange TS monogram. The black-background favicon has been replaced.
+
+SERVICE DETAILS
+- All five service rows are keyboard-accessible buttons that open an accessible native dialog overlay.
+- Each overlay includes a short editorial explanation, deliverables and a three-step workflow. The visual panel uses original CSS artwork, not stock imagery.

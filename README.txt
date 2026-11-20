@@ -19,10 +19,10 @@ PUBLIC CONTACT
 - No founder-private email is exposed.
 
 CONTACT FORM LIMITATION
-The form validates the fields and opens the visitor's own email application with a pre-addressed draft to hello@twentysixes.com. The website does not itself transmit or store submissions. A visitor without a configured mail application may need to use the direct email link. If you later want an on-page submission flow, connect a form backend (for example, a hosted form endpoint) before launch and update the privacy notice accordingly.
+The form submits directly to Formspree endpoint xgakzgqq and is configured to forward submissions to hello@twentysixes.com. Confirm the Formspree recipient and notification settings in the Formspree dashboard before launch.
 
 CALENDLY
-The optional Calendly URL remains blank until the real public event URL is supplied. Add it in script.js to display the booking link. No placeholder link is published.
+The contact section displays one external Calendly booking link: https://calendly.com/pk-twentysixes/30min. The calendar itself is not embedded.
 
 DEPLOYMENT
 Upload the CONTENTS of the twentysixes_rebuild folder to the static host's document root. Do not upload the enclosing ZIP as the website. Cloudflare Pages can deploy this static folder via a GitHub repository; no paid web hosting plan is required for this static site.
@@ -30,7 +30,7 @@ Upload the CONTENTS of the twentysixes_rebuild folder to the static host's docum
 PRE-LAUNCH CHECKS
 1. Connect twentysixes.com to Cloudflare Pages and enable HTTPS.
 2. Preserve Google Workspace MX, SPF and DKIM records when moving DNS to Cloudflare.
-3. Test navigation, mobile menu, all email links, enquiry validation, mailto behaviour and privacy page.
+3. Test navigation, mobile menu, all email links, enquiry validation and successful Formspree delivery, Calendly link and privacy page.
 4. Supply the real Calendly URL if booking should be enabled.
 5. Verify all public social links and business/legal details before launch.
 
@@ -42,3 +42,8 @@ V2.1 UPDATE
 - Adjusted hero typography, vertical spacing and artwork positioning to prevent the first-screen composition from feeling cut off on common desktop and mobile viewports.
 - Added restrained CSS-only motion to the orbit artwork, respecting prefers-reduced-motion.
 - Sensex.Senseless and CricDoosra remain OWNED MEDIA PROPERTIES, not client case studies. Do not present them as clients.
+
+V3 CONTACT + SERVICE INTERACTIONS
+- Five service rows are interactive and open accessible editorial detail overlays.
+- Each overlay contains a short explanation, deliverables and a three-step process, with CSS-generated graphic artwork.
+- Enquiry form uses Formspree with asynchronous submission, status feedback and a honeypot field.

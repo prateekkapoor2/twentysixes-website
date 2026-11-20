@@ -41,12 +41,12 @@
     <section class="services section-pad" id="services">
       <div class="eyebrow"><span>02 / WHAT WE DO</span><span>CREATIVE TO EXECUTION</span></div>
       <div class="section-heading"><h2>Useful creativity.<br><em>Delivered.</em></h2><p>Flexible support for teams that need stronger ideas, more content capacity or a creative partner who can take work from brief to finished asset.</p></div>
-      <div class="service-list">
-        <article><i>01</i><div><h3>Content strategy &amp; creative</h3><p>Content direction, audience and format research, creative concepts, scripting, calendars and campaign thinking.</p></div><span>↗</span></article>
-        <article><i>02</i><div><h3>Founder &amp; executive content</h3><p>Founder-led content programmes: positioning, thought leadership, short-form scripts, editorial planning and repurposing.</p></div><span>↗</span></article>
-        <article><i>03</i><div><h3>White-label content execution</h3><p>Flexible creative and content support for agencies — from research and scripting to production coordination and platform-ready assets.</p></div><span>↗</span></article>
-        <article><i>04</i><div><h3>Brand campaigns &amp; creator-led ideas</h3><p>Campaign concepts, branded entertainment and creator collaborations designed around a clear audience idea.</p></div><span>↗</span></article>
-        <article><i>05</i><div><h3>Original formats &amp; media IP</h3><p>Developing original content formats, music-led ideas and owned media properties with a distinct identity.</p></div><span>↗</span></article>
+      <div class="service-list" aria-label="Our services">
+        <button class="service-item" type="button" data-service="strategy" aria-haspopup="dialog"><i>01</i><span class="service-copy"><strong>Content strategy &amp; creative</strong><small>Find the story. Shape the idea. Give it direction.</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+        <button class="service-item" type="button" data-service="founder" aria-haspopup="dialog"><i>02</i><span class="service-copy"><strong>Founder &amp; executive content</strong><small>Turn expertise and perspective into a consistent public voice.</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+        <button class="service-item" type="button" data-service="whitelabel" aria-haspopup="dialog"><i>03</i><span class="service-copy"><strong>White-label content execution</strong><small>Extra creative capacity, built to fit your agency workflow.</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+        <button class="service-item" type="button" data-service="campaigns" aria-haspopup="dialog"><i>04</i><span class="service-copy"><strong>Brand campaigns &amp; creator-led ideas</strong><small>Campaign thinking with a clear audience idea at the centre.</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+        <button class="service-item" type="button" data-service="ip" aria-haspopup="dialog"><i>05</i><span class="service-copy"><strong>Original formats &amp; media IP</strong><small>Build a format people recognise, return to and remember.</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
       </div>
       <p class="service-note">Engagements can be scoped as a paid pilot, a defined project or an ongoing monthly partnership. Creator fees, media spend and third-party production budgets are scoped separately.</p>
     </section>
@@ -73,19 +73,34 @@
 
     <section class="contact section-pad" id="contact">
       <div class="eyebrow"><span>05 / START A CONVERSATION</span><span>CONTACT</span></div>
-      <div class="two-col contact-grid"><div><h2>Let's make<br><em>something matter.</em></h2><p class="contact-intro">Have a brief, a challenge or an idea worth exploring? Tell us a little about it. We will take it from there.</p><div class="contact-details"><span>CONTACT</span><a href="mailto:hello@twentysixes.com">hello@twentysixes.com ↗</a></div></div>
-        <div class="contact-form-wrap"><form id="enquiry-form">
+      <div class="two-col contact-grid"><div><h2>Let's make<br><em>something matter.</em></h2><p class="contact-intro">Have a brief, a challenge or an idea worth exploring? Tell us a little about it. We will take it from there.</p><div class="contact-details"><span>EMAIL</span><a href="mailto:hello@twentysixes.com">hello@twentysixes.com ↗</a><span>BOOK A 30-MINUTE DISCOVERY CALL</span><a href="https://calendly.com/pk-twentysixes/30min" target="_blank" rel="noopener noreferrer">Find a time to talk ideas ↗</a></div></div>
+        <div class="contact-form-wrap"><form id="enquiry-form" action="https://formspree.io/f/xgakzgqq" method="POST">
+          <input type="hidden" name="_subject" value="New website enquiry — Twenty Sixes Media">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="form-honeypot" aria-hidden="true">
           <label>Your name<input name="name" autocomplete="name" placeholder="Name" required></label>
           <label>Work email<input name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label>
           <label>Company / organisation<input name="company" autocomplete="organization" placeholder="Company name (optional)"></label>
           <label>What would you like to discuss?<select name="enquiry" required><option value="" disabled selected>Select an enquiry type</option><option>White-label agency partnership</option><option>Founder / executive content</option><option>Content strategy or creative project</option><option>Brand campaign / creator collaboration</option><option>Original formats / licensing</option><option>Something else</option></select></label>
           <label>A little about the project<textarea name="message" rows="4" placeholder="A few lines about what you have in mind…" required></textarea></label>
           <label class="consent"><input type="checkbox" name="consent" required><span>I agree that Twenty Sixes Media may use these details to respond to my enquiry. See the <a href="privacy.html">Privacy Notice</a>.</span></label>
-          <button class="button button-dark" type="submit">Prepare enquiry email ↗</button>
-          <p class="form-note" id="form-status" aria-live="polite">This form opens your email app with the enquiry details. Nothing is submitted or stored on this website.</p>
+          <button class="button button-dark" type="submit" id="form-submit">Send enquiry ↗</button>
+          <p class="form-note" id="form-status" role="status" aria-live="polite">Your details will be sent securely to our team so we can respond to your enquiry.</p>
         </form></div></div>
     </section>
   </main>
+  <dialog class="service-dialog" id="service-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="Close service details">×</button>
+      <div class="dialog-visual" aria-hidden="true"><div class="visual-index">TWENTY SIXES / FIELD NOTES</div><div class="visual-art" id="dialog-art"><span>26</span></div><div class="visual-caption" id="dialog-caption">IDEAS, WITH INTENTION.</div></div>
+      <div class="dialog-content">
+        <div class="eyebrow"><span id="dialog-number">01 / WHAT WE DO</span><span>FROM BRIEF TO OUTCOME</span></div>
+        <h2 id="dialog-title">Content strategy <em>&amp; creative.</em></h2>
+        <p class="dialog-lead" id="dialog-lead"></p>
+        <div class="dialog-columns"><div><h3>What we work on</h3><ul id="dialog-deliverables"></ul></div><div><h3>How it moves</h3><ol id="dialog-process"></ol></div></div>
+        <p class="dialog-close-note">Have a brief in mind? <a href="#contact" class="dialog-contact-link">Tell us what you're working on ↗</a></p>
+      </div>
+    </div>
+  </dialog>
   <footer><div class="footer-top"><a class="logo" href="#home">TWENTY SIXES<span>.</span></a><span>CREATORS. BRANDS. CULTURE.</span><a href="#home">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© <span id="year"></span> TWENTY SIXES MEDIA. ALL RIGHTS RESERVED.</span><span>INDEPENDENT · FOUNDER-LED · INDIA</span><a href="mailto:hello@twentysixes.com">GET IN TOUCH ↗</a></div><p class="legal-line">Twenty Sixes Media is a trading name. Contracting and invoicing details are provided in the relevant proposal or agreement.</p></footer>
   <script src="script.js"></script>
 </body>
