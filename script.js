@@ -29,9 +29,14 @@ if (menu && nav) {
       if (section.getBoundingClientRect().top <= marker) active = section;
       else break;
     }
-    const nextHash = `#${active.id}`;
-    if (window.location.hash !== nextHash) {
-      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${nextHash}`);
+    // The homepage uses the clean root URL. Only interior sections get hashes.
+    // replaceState keeps scroll tracking from filling the browser history.
+    const nextUrl = active.id === 'home'
+      ? `${window.location.pathname}${window.location.search}`
+      : `${window.location.pathname}${window.location.search}#${active.id}`;
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    if (currentUrl !== nextUrl) {
+      window.history.replaceState(null, '', nextUrl);
     }
   };
   const scheduleHashSync = () => {
