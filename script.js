@@ -1,39 +1,58 @@
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('nav');
-if (menu && nav) {
+// Mobile navigation: close reliably on outside interaction and any touch/scroll gesture.
+(() => {
+  const menu = document.querySelector('.site-header .menu');
+  const nav = document.querySelector('.site-header nav');
+  if (!menu || !nav) return;
+
+  const isMobileMenu = () => window.matchMedia('(max-width: 850px)').matches;
   const closeMobileMenu = () => {
     nav.classList.remove('open');
     menu.setAttribute('aria-expanded', 'false');
     menu.setAttribute('aria-label', 'Open navigation');
   };
+  const openMobileMenu = () => {
+    nav.classList.add('open');
+    menu.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-label', 'Close navigation');
+  };
 
   menu.addEventListener('click', event => {
+    event.preventDefault();
     event.stopPropagation();
-    const isOpen = nav.classList.toggle('open');
-    menu.setAttribute('aria-expanded', String(isOpen));
-    menu.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    if (nav.classList.contains('open')) closeMobileMenu();
+    else openMobileMenu();
   });
 
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // Close when the visitor taps anywhere outside the expanded navigation.
-  document.addEventListener('pointerdown', event => {
-    if (!nav.classList.contains('open')) return;
-    if (nav.contains(event.target) || menu.contains(event.target)) return;
+  // Capture phase is intentional: dismissal must run before other page handlers.
+  const outsideInteraction = event => {
+    if (!isMobileMenu() || !nav.classList.contains('open')) return;
+    const target = event.target;
+    if (menu === target || menu.contains(target) || nav === target || nav.contains(target)) return;
     closeMobileMenu();
-  });
+  };
+  document.addEventListener('pointerdown', outsideInteraction, true);
+  document.addEventListener('touchstart', outsideInteraction, { capture: true, passive: true });
+  document.addEventListener('click', outsideInteraction, true);
 
-  // Scrolling should dismiss the mobile menu immediately, including touch scrolling.
-  window.addEventListener('scroll', () => {
-    if (nav.classList.contains('open')) closeMobileMenu();
-  }, { passive: true });
+  // iOS Safari can deliver touch movement before a conventional scroll event.
+  const dismissOnMovement = () => {
+    if (isMobileMenu() && nav.classList.contains('open')) closeMobileMenu();
+  };
+  window.addEventListener('scroll', dismissOnMovement, { passive: true, capture: true });
+  document.addEventListener('touchmove', dismissOnMovement, { passive: true, capture: true });
+  document.addEventListener('wheel', dismissOnMovement, { passive: true, capture: true });
 
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && nav.classList.contains('open')) closeMobileMenu();
+    if (event.key === 'Escape') closeMobileMenu();
   });
-}
+  window.addEventListener('resize', () => {
+    if (!isMobileMenu()) closeMobileMenu();
+  });
+})();
 
 // Keep the URL hash in sync with the section currently in view.
 // Navigation clicks still scroll to their anchors; as the visitor continues
