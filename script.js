@@ -12,6 +12,37 @@ if (menu && nav) {
     menu.setAttribute('aria-label', 'Open navigation');
   }));
 }
+
+// Keep the URL hash in sync with the section currently in view.
+// Navigation clicks still scroll to their anchors; as the visitor continues
+// scrolling, the hash follows the active section without adding history entries.
+(() => {
+  const sectionIds = ['home', 'studio', 'services', 'work', 'approach', 'contact'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+  if (!sections.length) return;
+  let frame = 0;
+  const syncSectionHash = () => {
+    frame = 0;
+    const marker = Math.min(window.innerHeight * 0.38, 300);
+    let active = sections[0];
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= marker) active = section;
+      else break;
+    }
+    const nextHash = `#${active.id}`;
+    if (window.location.hash !== nextHash) {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${nextHash}`);
+    }
+  };
+  const scheduleHashSync = () => {
+    if (!frame) frame = window.requestAnimationFrame(syncSectionHash);
+  };
+  window.addEventListener('scroll', scheduleHashSync, { passive: true });
+  window.addEventListener('resize', scheduleHashSync);
+  window.addEventListener('load', scheduleHashSync);
+  scheduleHashSync();
+})();
+
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
