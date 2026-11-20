@@ -1,16 +1,38 @@
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('nav');
 if (menu && nav) {
-  menu.addEventListener('click', () => {
+  const closeMobileMenu = () => {
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-label', 'Open navigation');
+  };
+
+  menu.addEventListener('click', event => {
+    event.stopPropagation();
     const isOpen = nav.classList.toggle('open');
     menu.setAttribute('aria-expanded', String(isOpen));
     menu.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
   });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menu.setAttribute('aria-expanded', 'false');
-    menu.setAttribute('aria-label', 'Open navigation');
-  }));
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close when the visitor taps anywhere outside the expanded navigation.
+  document.addEventListener('pointerdown', event => {
+    if (!nav.classList.contains('open')) return;
+    if (nav.contains(event.target) || menu.contains(event.target)) return;
+    closeMobileMenu();
+  });
+
+  // Scrolling should dismiss the mobile menu immediately, including touch scrolling.
+  window.addEventListener('scroll', () => {
+    if (nav.classList.contains('open')) closeMobileMenu();
+  }, { passive: true });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) closeMobileMenu();
+  });
 }
 
 // Keep the URL hash in sync with the section currently in view.
@@ -71,7 +93,7 @@ if (form) form.addEventListener('submit', async event => {
     status.textContent = 'We could not send your enquiry just now. Please email hello@twentysixes.com directly.';
   } finally {
     button.disabled = false;
-    button.textContent = 'Send enquiry ↗';
+    button.textContent = 'Send enquiry ↗︎';
   }
 });
 

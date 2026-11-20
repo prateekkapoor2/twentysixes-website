@@ -106,7 +106,7 @@ form button:disabled{opacity:.55;cursor:wait}
 .dialog-subhead{margin:26px 0 12px}
 .dialog-deliverables{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
 .dialog-deliverables li{font-size:11px;line-height:1.6;padding-left:15px;position:relative;color:#34322f}
-.dialog-deliverables li:before{content:'↗';position:absolute;left:0;color:var(--orange)}
+.dialog-deliverables li:before{content:'↗︎';position:absolute;left:0;color:var(--orange)}
 .dialog-steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .dialog-steps div{padding:12px 8px 12px 0}.dialog-steps small{display:block;font:8px 'DM Mono',monospace;color:var(--orange);margin-bottom:7px}.dialog-steps b{font-size:10px;font-weight:600;line-height:1.4}
 .dialog-cta{margin-top:27px;text-decoration:none}
