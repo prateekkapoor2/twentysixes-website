@@ -135,40 +135,33 @@ if (form) form.addEventListener('submit', async event => {
 
 // Service overlays: concise, practical descriptions rather than generic agency copy.
 const serviceDetails = {
-  strategy: {
-    number:'01', kicker:'THE THINKING BEHIND THE WORK', title:'Content strategy <em>&amp; creative.</em>',
-    intro:'A useful content plan starts with a clear reason to exist. We connect the audience, the business objective and the platform — then turn that thinking into ideas a team can actually make.',
-    deliverables:['Audience and channel research','Content pillars and editorial direction','Campaign concepts and creative territories','Scripts, calendars and briefs'],
-    steps:['Understand the brief','Find the angle','Shape the formats','Build the plan'],
-    artLabel:'FROM SIGNAL TO STORY', artFoot:'Audience signal → editorial angle → usable plan.', visual:'<div class="visual-strategy"><div class="vs-top"><span>AUDIENCE SIGNAL</span><b>01</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>EDITORIAL ANGLE</small><strong>One clear<br>point of view.</strong></div><div class="vs-tags"><span>FORMAT</span><span>HOOK</span><span>CALENDAR</span></div></div>'
-  },
   founder: {
-    number:'02', kicker:'MAKE EXPERTISE VISIBLE', title:'Founder &amp; executive <em>content.</em>',
-    intro:'The strongest founder content sounds like the person behind the business — not a corporate brochure. We help turn experience, opinions and expertise into a consistent editorial voice.',
-    deliverables:['Positioning and personal narrative','Thought-leadership themes','Short-form scripts and post concepts','Editorial calendar and repurposing plan'],
-    steps:['Find the voice','Choose the themes','Create the stories','Publish and refine'],
-    artLabel:'A HUMAN POINT OF VIEW', artFoot:'Experience → point of view → a recognisable voice.', visual:'<div class="visual-founder"><div class="vf-card"><small>FOUNDER / FIELD NOTES</small><div class="vf-avatar">P</div><strong>What I believe<br>and why it matters.</strong><span>VOICE · EXPERTISE · EXPERIENCE</span></div><div class="vf-quote">“The insight only you can own.”</div><div class="vf-orbit"></div></div>'
-  },
-  'white-label': {
-    number:'03', kicker:'EXTRA CAPACITY. YOUR CLIENT RELATIONSHIP.', title:'White-label content <em>execution.</em>',
-    intro:'An adaptable creative partner behind the scenes. We support agencies with research, ideas and content production tasks that help their teams deliver more — while the agency remains front of house.',
-    deliverables:['Research and content planning','Concepts, hooks and scripting','Creative development and asset coordination','Platform-ready copy and content packs'],
-    steps:['Align on the brief','Work to your process','Create and coordinate','Hand over cleanly'],
-    artLabel:'BUILT TO FIT YOUR TEAM', artFoot:'Brief in. Coordinated creative. Clean handover.', visual:'<div class="visual-whitelabel"><div class="vw-node vw-agency"><small>YOUR AGENCY</small><b>Client brief</b></div><div class="vw-link">↓</div><div class="vw-node vw-studio"><small>STUDIO SUPPORT</small><b>Research · Scripts<br>Creative · Assets</b></div><div class="vw-link">↓</div><div class="vw-node vw-output"><small>BACK TO YOUR TEAM</small><b>Ready to present<br>and publish</b></div></div>'
-  },
-  campaigns: {
-    number:'04', kicker:'IDEAS PEOPLE WANT TO SPEND TIME WITH', title:'Brand campaigns &amp; <em>creator-led ideas.</em>',
-    intro:'A campaign needs more than a placement. We develop the central idea, the story and the creative shape — then help coordinate the right collaborators and content around it.',
-    deliverables:['Campaign territories and creative concepts','Branded entertainment ideas','Creator research and shortlist development','Briefs, content direction and coordination'],
-    steps:['Define the audience','Land the idea','Select collaborators','Coordinate delivery'],
-    artLabel:'MAKE THE BRAND PART OF THE STORY', artFoot:'Audience tension → campaign idea → creator fit.', visual:'<div class="visual-campaign"><div class="vc-poster"><small>CAMPAIGN TERRITORY / 01</small><strong>MAKE IT<br>WORTH<br>SHARING<span>.</span></strong><i>BRAND × CULTURE</i></div><div class="vc-orbit vc-one">AUDIENCE</div><div class="vc-orbit vc-two">CREATOR</div></div>'
+    number:'01', kicker:'TURN EXPERTISE INTO BUYER CONFIDENCE', title:'Founder &amp; Executive <em>GTM Engines.</em>',
+    intro:'Turn a focused monthly founder session into a consistent stream of buyer-focused ideas, executive thought leadership and sales-enablement content.',
+    deliverables:['Founder positioning and buyer narrative','LinkedIn thought-leadership programme','Short-form executive video scripts','Sales-enablement content and repurposing'],
+    steps:['Capture the expertise','Shape buyer-relevant themes','Create the content system','Publish and learn'],
+    artLabel:'ONE SESSION. A MONTH OF SIGNAL.', artFoot:'Founder insight → buyer relevance → market presence.', visual:'<div class="visual-founder"><div class="vf-card"><small>FOUNDER / GTM FIELD NOTES</small><div class="vf-avatar">60</div><strong>One hour.<br>Useful ideas.</strong><span>VOICE · TRUST · PIPELINE</span></div><div class="vf-quote">“Make expertise visible.”</div><div class="vf-orbit"></div></div>'
   },
   ip: {
-    number:'05', kicker:'BUILD SOMETHING WITH A LIFE OF ITS OWN', title:'Original formats &amp; <em>media IP.</em>',
-    intro:'We create and develop distinctive content properties — from repeatable editorial formats to music-led concepts — with a recognisable voice, a clear audience and room to grow.',
-    deliverables:['Format and property development','Editorial identity and recurring concepts','Original scripts, music-led ideas and content','Publishing and audience-learning frameworks'],
-    steps:['Spot the territory','Design the format','Make the pilot','Publish and evolve'],
-    artLabel:'AN IDEA THAT CAN TRAVEL', artFoot:'A repeatable format. A returning audience. Room to grow.', visual:'<div class="visual-ip"><div class="vi-header"><small>ORIGINAL FORMAT / SERIES 01</small><b>REPEATABLE BY DESIGN</b></div><div class="vi-episodes"><div><small>EP. 01</small><b>THE IDEA</b></div><div><small>EP. 02</small><b>THE RETURN</b></div><div><small>EP. 03</small><b>THE TWIST</b></div></div><div class="vi-footer">FORMAT → IDENTITY → IP</div></div>'
+    number:'02', kicker:'BUILD DISTINCTIVE BRAND ASSETS', title:'Original Formats &amp; <em>Branded IP.</em>',
+    intro:'Develop repeatable video series, musical hooks and cultural storytelling that interrupt the feed, create recognition and give audiences a reason to return.',
+    deliverables:['Original format and series concepts','Branded video IP and recurring story worlds','Musical hooks and cultural storytelling','Pilot scripts and repeatable production formats'],
+    steps:['Find the cultural tension','Design the format','Create the pilot','Build for repeatability'],
+    artLabel:'MAKE THE BRAND RECOGNISABLE', artFoot:'A strong format. A distinct voice. A reason to return.', visual:'<div class="visual-ip"><div class="vi-header"><small>BRANDED FORMAT / SERIES 01</small><b>REPEATABLE BY DESIGN</b></div><div class="vi-episodes"><div><small>EP. 01</small><b>THE HOOK</b></div><div><small>EP. 02</small><b>THE RETURN</b></div><div><small>EP. 03</small><b>THE TWIST</b></div></div><div class="vi-footer">FORMAT → RECALL → IP</div></div>'
+  },
+  campaigns: {
+    number:'03', kicker:'CREATIVE BUILT FOR THE FEED', title:'High-Retention Campaign <em>&amp; Ad Creative.</em>',
+    intro:'Performance-minded video concepts and scripts designed around attention, message clarity and the behaviours of modern social and paid platforms.',
+    deliverables:['Campaign and ad creative territories','Short-form video concepts and scripts','Hooks, storyboards and creative variations','Rapid creative testing recommendations'],
+    steps:['Define the action','Develop the hooks','Create variations','Test and refine'],
+    artLabel:'EARN THE NEXT SECOND', artFoot:'Hook → hold attention → make the message land.', visual:'<div class="visual-campaign"><div class="vc-poster"><small>CREATIVE TEST / 01</small><strong>STOP<br>THE<br>SCROLL<span>.</span></strong><i>HOOK × HOLD × ACT</i></div><div class="vc-orbit vc-one">ATTENTION</div><div class="vc-orbit vc-two">ACTION</div></div>'
+  },
+  strategy: {
+    number:'04', kicker:'THE SYSTEM BEFORE THE SHOOT', title:'Content Strategy <em>&amp; Positioning.</em>',
+    intro:'Build the audience understanding, narrative architecture and commercial content system before a single frame is shot.',
+    deliverables:['Audience and category research','Positioning and narrative architecture','Content pillars and channel roles','Commercial content roadmap and briefs'],
+    steps:['Understand the market','Define the point of view','Build the content system','Brief the execution'],
+    artLabel:'STRATEGY BEFORE PRODUCTION', artFoot:'Audience signal → narrative → commercial content system.', visual:'<div class="visual-strategy"><div class="vs-top"><span>AUDIENCE SIGNAL</span><b>01</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>NARRATIVE ARCHITECTURE</small><strong>One clear<br>point of view.</strong></div><div class="vs-tags"><span>POSITIONING</span><span>CONTENT</span><span>GTM</span></div></div>'
   }
 };
 const dialog = document.getElementById('service-dialog');
