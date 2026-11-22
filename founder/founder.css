@@ -74,7 +74,8 @@ body.belief-overlay-open{overflow:hidden}
 
 
 
-/* Version 145 — restore open proof-grid spacing and use a single LinkedIn arrow */
+
+/* Version 146 — close mobile proof-grid divider and draw editorial orange arrows */
 .portrait-linkedin{
   position:absolute;z-index:3;right:25px;bottom:25px;
   color:#fff;text-decoration:none;
@@ -84,8 +85,28 @@ body.belief-overlay-open{overflow:hidden}
 .portrait-linkedin:hover,.portrait-linkedin:focus-visible{
   color:var(--orange);transform:translateY(-2px);outline:none;
 }
-.belief-trigger>b{font-size:0;line-height:1;color:var(--orange)}
-.belief-trigger>b::before{content:"↗";font:400 25px/1 Arial,sans-serif;color:var(--orange)}
+/* Draw the arrow as a fine line, avoiding emoji glyph substitution on iOS. */
+.belief-trigger>b{
+  position:relative;display:block;width:28px;height:28px;
+  font-size:0;line-height:0;color:transparent;
+}
+.belief-trigger>b::before{
+  content:"";position:absolute;width:27px;height:1.5px;
+  background:var(--orange);left:0;top:14px;
+  transform:rotate(-45deg);transform-origin:center;
+}
+.belief-trigger>b::after{
+  content:"";position:absolute;width:9px;height:9px;
+  border-top:1.5px solid var(--orange);border-right:1.5px solid var(--orange);
+  right:1px;top:3px;
+}
 @media(max-width:650px){
   .portrait-linkedin{right:18px;bottom:18px;font-size:8px;letter-spacing:.12em}
+  /* The last card's top rule must meet the centre divider, across the small
+     gutter created by the original open-grid card spacing. */
+  .proof-grid article:nth-child(4){position:relative}
+  .proof-grid article:nth-child(4)::before{
+    content:"";position:absolute;top:-1px;left:-27px;width:27px;
+    border-top:1px solid #555;
+  }
 }
