@@ -62,8 +62,17 @@
   const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
   if (!sections.length) return;
   let frame = 0;
+  // A page opened with an incoming section hash (for example from /founder)
+  // must first land on that section. Do not let the scroll/hash synchronizer
+  // replace the requested hash with the homepage hero while the new document
+  // is still at scroll position zero.
+  const initialHashId = decodeURIComponent(window.location.hash.slice(1));
+  const initialHashTarget = initialHashId ? document.getElementById(initialHashId) : null;
+  let initialHashPending = Boolean(initialHashTarget);
+
   const syncSectionHash = () => {
     frame = 0;
+    if (initialHashPending) return;
     const marker = Math.min(window.innerHeight * 0.38, 300);
     let active = sections[0];
     for (const section of sections) {
@@ -85,8 +94,16 @@
   };
   window.addEventListener('scroll', scheduleHashSync, { passive: true });
   window.addEventListener('resize', scheduleHashSync);
-  window.addEventListener('load', scheduleHashSync);
-  scheduleHashSync();
+  window.addEventListener('load', () => {
+    if (initialHashPending && initialHashTarget) {
+      // Explicitly honour the incoming fragment on both hosted URLs and
+      // local file previews, then resume normal active-section hash tracking.
+      window.scrollTo({ top: initialHashTarget.getBoundingClientRect().top + window.scrollY, behavior: 'instant' });
+      initialHashPending = false;
+    }
+    scheduleHashSync();
+  }, { once: true });
+  if (!initialHashPending) scheduleHashSync();
 })();
 
 const year = document.getElementById('year');
