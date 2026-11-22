@@ -136,32 +136,32 @@ if (form) form.addEventListener('submit', async event => {
 // Service overlays: concise, practical descriptions rather than generic agency copy.
 const serviceDetails = {
   founder: {
-    number:'01', kicker:'TURN EXPERTISE INTO BUYER CONFIDENCE', title:'Founder &amp; Executive <em>GTM Engines.</em>',
-    intro:'Turn a focused monthly founder session into a consistent stream of buyer-focused ideas, executive thought leadership and sales-enablement content.',
-    deliverables:['Founder positioning and buyer narrative','LinkedIn thought-leadership programme','Short-form executive video scripts','Sales-enablement content and repurposing'],
+    number:'01', kicker:'TURN EXPERTISE INTO BUYER CONFIDENCE', title:'Founder &amp; Executive <em>Visibility.</em>',
+    intro:'You give us 60 minutes a month on Zoom. We turn it into 16 buyer-focused LinkedIn posts and 8 short-form videos built to build trust and drive pipeline.',
+    deliverables:['One 60-minute monthly Zoom session','16 buyer-focused LinkedIn posts','8 short-form executive videos','A consistent voice built to earn trust and drive pipeline'],
     steps:['Capture the expertise','Shape buyer-relevant themes','Create the content system','Publish and learn'],
     artLabel:'ONE SESSION. A MONTH OF SIGNAL.', artFoot:'Founder insight → buyer relevance → market presence.', visual:'<div class="visual-founder"><div class="vf-card"><small>FOUNDER / GTM FIELD NOTES</small><div class="vf-avatar">60</div><strong>One hour.<br>Useful ideas.</strong><span>VOICE · TRUST · PIPELINE</span></div><div class="vf-quote">“Make expertise visible.”</div><div class="vf-orbit"></div></div>'
   },
   ip: {
-    number:'02', kicker:'BUILD DISTINCTIVE BRAND ASSETS', title:'Original Formats &amp; <em>Branded IP.</em>',
-    intro:'Develop repeatable video series, musical hooks and cultural storytelling that interrupt the feed, create recognition and give audiences a reason to return.',
-    deliverables:['Original format and series concepts','Branded video IP and recurring story worlds','Musical hooks and cultural storytelling','Pilot scripts and repeatable production formats'],
+    number:'02', kicker:'BUILD DISTINCTIVE BRAND ASSETS', title:'Original Brand <em>IP.</em>',
+    intro:'We design and script repeatable short-form series—blending sharp industry satire, storytelling, and custom audio hooks—so your brand builds an organic audience that actually subscribes.',
+    deliverables:['Repeatable short-form series concepts','Sharp industry satire and storytelling','Custom audio hooks','Scripts and formats designed to build an organic audience'],
     steps:['Find the cultural tension','Design the format','Create the pilot','Build for repeatability'],
     artLabel:'MAKE THE BRAND RECOGNISABLE', artFoot:'A strong format. A distinct voice. A reason to return.', visual:'<div class="visual-ip"><div class="vi-header"><small>BRANDED FORMAT / SERIES 01</small><b>REPEATABLE BY DESIGN</b></div><div class="vi-episodes"><div><small>EP. 01</small><b>THE HOOK</b></div><div><small>EP. 02</small><b>THE RETURN</b></div><div><small>EP. 03</small><b>THE TWIST</b></div></div><div class="vi-footer">FORMAT → RECALL → IP</div></div>'
   },
   campaigns: {
-    number:'03', kicker:'CREATIVE BUILT FOR THE FEED', title:'High-Retention Campaign <em>&amp; Ad Creative.</em>',
-    intro:'Performance-minded video concepts and scripts designed around attention, message clarity and the behaviours of modern social and paid platforms.',
-    deliverables:['Campaign and ad creative territories','Short-form video concepts and scripts','Hooks, storyboards and creative variations','Rapid creative testing recommendations'],
+    number:'03', kicker:'DISTRIBUTION WITHOUT THE COLD START', title:'Native Brand <em>Integrations.</em>',
+    intro:'Skip the cold-start problem. We integrate your brand natively into our high-retention owned channels—combining custom creative with proven distribution to reach buyers where they already watch.',
+    deliverables:['Native integrations across owned channels','Custom creative shaped around the brand','Distribution through established audience channels','Sponsored storytelling designed to reach relevant buyers'],
     steps:['Define the action','Develop the hooks','Create variations','Test and refine'],
-    artLabel:'EARN THE NEXT SECOND', artFoot:'Hook → hold attention → make the message land.', visual:'<div class="visual-campaign"><div class="vc-poster"><small>CREATIVE TEST / 01</small><strong>STOP<br>THE<br>SCROLL<span>.</span></strong><i>HOOK × HOLD × ACT</i></div><div class="vc-orbit vc-one">ATTENTION</div><div class="vc-orbit vc-two">ACTION</div></div>'
+    artLabel:'CREATIVE MEETS DISTRIBUTION', artFoot:'Native integration → audience attention → brand recall.', visual:'<div class="visual-campaign"><div class="vc-poster"><small>CREATIVE TEST / 01</small><strong>STOP<br>THE<br>SCROLL<span>.</span></strong><i>HOOK × HOLD × ACT</i></div><div class="vc-orbit vc-one">ATTENTION</div><div class="vc-orbit vc-two">ACTION</div></div>'
   },
   strategy: {
-    number:'04', kicker:'THE SYSTEM BEFORE THE SHOOT', title:'Content Strategy <em>&amp; Positioning.</em>',
-    intro:'Build the audience understanding, narrative architecture and commercial content system before a single frame is shot.',
-    deliverables:['Audience and category research','Positioning and narrative architecture','Content pillars and channel roles','Commercial content roadmap and briefs'],
+    number:'04', kicker:'A COHESIVE GROWTH SPRINT', title:'Growth <em>Campaigns.</em>',
+    intro:'Cohesive 30-to-60-day video and social sprints built to solve a specific growth push—whether you’re launching something new, entering a market, or replacing fatigued ads.',
+    deliverables:['30-to-60-day video and social campaigns','Creative concepts and campaign messaging','Multi-asset content for coordinated distribution','A defined sprint tied to a specific growth objective'],
     steps:['Understand the market','Define the point of view','Build the content system','Brief the execution'],
-    artLabel:'STRATEGY BEFORE PRODUCTION', artFoot:'Audience signal → narrative → commercial content system.', visual:'<div class="visual-strategy"><div class="vs-top"><span>AUDIENCE SIGNAL</span><b>01</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>NARRATIVE ARCHITECTURE</small><strong>One clear<br>point of view.</strong></div><div class="vs-tags"><span>POSITIONING</span><span>CONTENT</span><span>GTM</span></div></div>'
+    artLabel:'ONE PUSH. MULTIPLE ASSETS.', artFoot:'Campaign idea → coordinated content → growth objective.', visual:'<div class="visual-strategy"><div class="vs-top"><span>AUDIENCE SIGNAL</span><b>01</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>NARRATIVE ARCHITECTURE</small><strong>One clear<br>point of view.</strong></div><div class="vs-tags"><span>POSITIONING</span><span>CONTENT</span><span>GTM</span></div></div>'
   }
 };
 const dialog = document.getElementById('service-dialog');

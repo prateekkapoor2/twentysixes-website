@@ -71,3 +71,21 @@
 .belief-flow .flow-node:last-child i{color:var(--orange)}
 body.belief-overlay-open{overflow:hidden}
 @media(max-width:650px){.proof-grid article>span{min-height:3.5em}.proof-grid p{font-size:9px}.belief-trigger{grid-template-columns:35px 1fr 26px;gap:10px;padding:21px 0}.belief-trigger h3{font-size:17px}.belief-trigger p{font-size:10px}.belief-trigger:hover,.belief-trigger:focus-visible{padding-left:9px;padding-right:9px}.belief-dialog{padding:10px}.belief-dialog-panel{padding:28px 22px 30px;max-height:92vh}.belief-dialog-layout{display:flex;flex-direction:column;align-items:stretch;gap:25px;padding-top:42px}.belief-dialog-copy h2{font-size:42px}.belief-dialog-copy>p{font-size:12px}.belief-art{min-height:270px;padding:20px}.belief-flow{gap:7px}.belief-flow .flow-node{padding:11px 12px;font-size:11px}}
+
+
+
+/* Version 145 — restore open proof-grid spacing and use a single LinkedIn arrow */
+.portrait-linkedin{
+  position:absolute;z-index:3;right:25px;bottom:25px;
+  color:#fff;text-decoration:none;
+  font:9px 'DM Mono',monospace;letter-spacing:.12em;
+  transition:color .2s ease,transform .2s ease;
+}
+.portrait-linkedin:hover,.portrait-linkedin:focus-visible{
+  color:var(--orange);transform:translateY(-2px);outline:none;
+}
+.belief-trigger>b{font-size:0;line-height:1;color:var(--orange)}
+.belief-trigger>b::before{content:"↗";font:400 25px/1 Arial,sans-serif;color:var(--orange)}
+@media(max-width:650px){
+  .portrait-linkedin{right:18px;bottom:18px;font-size:8px;letter-spacing:.12em}
+}
