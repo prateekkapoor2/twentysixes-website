@@ -135,33 +135,33 @@ if (form) form.addEventListener('submit', async event => {
 
 // Service overlays: concise, practical descriptions rather than generic agency copy.
 const serviceDetails = {
-  founder: {
-    number:'01', kicker:'TURN EXPERTISE INTO BUYER CONFIDENCE', title:'Founder &amp; Executive <em>Visibility.</em>',
-    intro:'You give us 60 minutes a month on Zoom. We turn it into 16 buyer-focused LinkedIn posts and 8 short-form videos built to build trust and drive pipeline.',
-    deliverables:['One 60-minute monthly Zoom session','16 buyer-focused LinkedIn posts','8 short-form executive videos','A consistent voice built to earn trust and drive pipeline'],
-    steps:['Capture the expertise','Shape buyer-relevant themes','Create the content system','Publish and learn'],
-    artLabel:'ONE SESSION. A MONTH OF SIGNAL.', artFoot:'Founder insight → buyer relevance → market presence.', visual:'<div class="visual-founder"><div class="vf-card"><small>FOUNDER / GTM FIELD NOTES</small><div class="vf-avatar">60</div><strong>One hour.<br>Useful ideas.</strong><span>VOICE · TRUST · PIPELINE</span></div><div class="vf-quote">“Make expertise visible.”</div><div class="vf-orbit"></div></div>'
+  position: {
+    number:'01', kicker:'GET CLEAR ON WHAT MAKES YOU DIFFERENT', title:'Brand Positioning <em>Sprint.</em>',
+    intro:'We look at your business, your customers and the alternatives they could choose. Then we define what makes you different, who you are best placed to serve and the clearest reason customers should choose you.',
+    deliverables:['A review of your business and current messaging','A clear view of your priority audience','Your strengths and points of difference','A simple positioning statement','Core messages for your website and sales conversations'],
+    steps:['Understand the business','Look at the customer and market','Find the clearest point of difference','Agree the position and key messages'],
+    artLabel:'CLARITY BEFORE COMMUNICATION', artFoot:'Know what makes you different — and how to say it.', visual:'<div class="visual-strategy"><div class="vs-top"><span>THE BUSINESS</span><b>01</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>ONE CLEAR MESSAGE</small><strong>Why should<br>customers<br>choose you?</strong></div><div class="vs-tags"><span>AUDIENCE</span><span>VALUE</span><span>POSITION</span></div></div>'
   },
-  ip: {
-    number:'02', kicker:'BUILD DISTINCTIVE BRAND ASSETS', title:'Original Brand <em>IP.</em>',
-    intro:'We design and script repeatable short-form series—blending sharp industry satire, storytelling, and custom audio hooks—so your brand builds an organic audience that actually subscribes.',
-    deliverables:['Repeatable short-form series concepts','Sharp industry satire and storytelling','Custom audio hooks','Scripts and formats designed to build an organic audience'],
-    steps:['Find the cultural tension','Design the format','Create the pilot','Build for repeatability'],
-    artLabel:'MAKE THE BRAND RECOGNISABLE', artFoot:'A strong format. A distinct voice. A reason to return.', visual:'<div class="visual-ip"><div class="vi-header"><small>BRANDED FORMAT / SERIES 01</small><b>REPEATABLE BY DESIGN</b></div><div class="vi-episodes"><div><small>EP. 01</small><b>THE HOOK</b></div><div><small>EP. 02</small><b>THE RETURN</b></div><div><small>EP. 03</small><b>THE TWIST</b></div></div><div class="vi-footer">FORMAT → RECALL → IP</div></div>'
+  identity: {
+    number:'02', kicker:'MAKE YOUR BRAND CLEAR AND CONSISTENT', title:'Brand Messaging <em>&amp; Identity.</em>',
+    intro:'Once your position is clear, we shape the words and visual direction that bring it to life. We define your brand story, the way it speaks and the way it looks, so customers get a consistent impression wherever they meet you.',
+    deliverables:['A clear brand story and value proposition','A messaging framework and brand voice','Key messages for your website and sales materials','Visual direction for the brand','Practical brand guidelines for consistent use'],
+    steps:['Start with the agreed brand position','Shape the story and key messages','Set the visual direction','Bring the elements together in a usable brand guide'],
+    artLabel:'MAKE THE BRAND RECOGNISABLE', artFoot:'One clear story, expressed consistently.', visual:'<div class="visual-strategy"><div class="vs-top"><span>THE BRAND</span><b>02</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>ONE CONSISTENT IDENTITY</small><strong>How should your<br>brand look,<br>sound and<br>communicate?</strong></div><div class="vs-tags"><span>STORY</span><span>VOICE</span><span>IDENTITY</span></div></div>'
   },
-  campaigns: {
-    number:'03', kicker:'DISTRIBUTION WITHOUT THE COLD START', title:'Native Brand <em>Integrations.</em>',
-    intro:'Skip the cold-start problem. We integrate your brand natively into our high-retention owned channels—combining custom creative with proven distribution to reach buyers where they already watch.',
-    deliverables:['Native integrations across owned channels','Custom creative shaped around the brand','Distribution through established audience channels','Sponsored storytelling designed to reach relevant buyers'],
-    steps:['Define the action','Develop the hooks','Create variations','Test and refine'],
-    artLabel:'CREATIVE MEETS DISTRIBUTION', artFoot:'Native integration → audience attention → brand recall.', visual:'<div class="visual-campaign"><div class="vc-poster"><small>CREATIVE TEST / 01</small><strong>STOP<br>THE<br>SCROLL<span>.</span></strong><i>HOOK × HOLD × ACT</i></div><div class="vc-orbit vc-one">ATTENTION</div><div class="vc-orbit vc-two">ACTION</div></div>'
+  visibility: {
+    number:'03', kicker:'MAKE YOUR EXPERTISE EASIER TO FIND', title:'Visibility &amp; Authority <em>Programme.</em>',
+    intro:'We turn your experience and ideas into useful content that reaches the people you want to work with. This can include founder and executive communication, expert insights and a clear plan for where and how to share them — so people can discover your business and build trust in it.',
+    deliverables:['A clear content and visibility plan','Topics based on your customers’ questions','Founder or expert-led content','Writing, design and short-form video as agreed','A publishing and distribution plan','Regular review of audience response'],
+    steps:['Choose the audience and message','Plan useful themes and formats','Create and publish the work','Review response and improve'],
+    artLabel:'TURN KNOWLEDGE INTO TRUST', artFoot:'Useful ideas, shared consistently with the right people.', visual:'<div class="visual-founder"><div class="vf-card"><small>WHAT YOU KNOW</small><strong>How will<br>people<br>discover<br>and trust you?</strong><span>CONTENT · VOICE · TRUST</span></div><div class="vf-quote">“Make your expertise visible.”</div><div class="vf-orbit"></div></div>'
   },
-  strategy: {
-    number:'04', kicker:'A COHESIVE GROWTH SPRINT', title:'Growth <em>Campaigns.</em>',
-    intro:'Cohesive 30-to-60-day video and social sprints built to solve a specific growth push—whether you’re launching something new, entering a market, or replacing fatigued ads.',
-    deliverables:['30-to-60-day video and social campaigns','Creative concepts and campaign messaging','Multi-asset content for coordinated distribution','A defined sprint tied to a specific growth objective'],
-    steps:['Understand the market','Define the point of view','Build the content system','Brief the execution'],
-    artLabel:'ONE PUSH. MULTIPLE ASSETS.', artFoot:'Campaign idea → coordinated content → growth objective.', visual:'<div class="visual-strategy"><div class="vs-top"><span>AUDIENCE SIGNAL</span><b>01</b></div><div class="vs-signal"><i></i><i></i><i></i><i></i><i></i></div><div class="vs-arrow">↓</div><div class="vs-story"><small>NARRATIVE ARCHITECTURE</small><strong>One clear<br>point of view.</strong></div><div class="vs-tags"><span>POSITIONING</span><span>CONTENT</span><span>GTM</span></div></div>'
+  growth: {
+    number:'04', kicker:'GIVE IMPORTANT BUSINESS MOMENTS A PLAN', title:'Launch &amp; Growth <em>Programme.</em>',
+    intro:'We start with the business goal, then plan the message, audience and activity needed to move it forward. Whether you are launching a product, entering a market or looking to grow, we bring the right strategy and creative work together and review what is working.',
+    deliverables:['Launch or growth objective and audience','Core campaign message and creative direction','Content and campaign assets as agreed','Channel and distribution plan','A clear timeline, responsibilities and measures'],
+    steps:['Agree the goal and audience','Shape the message and campaign idea','Create the content and assets','Launch, review and adjust'],
+    artLabel:'GROWTH WITH A CLEAR PLAN', artFoot:'The right message, for the right people, at the right time.', visual:'<div class="visual-campaign"><div class="vc-poster"><small>CAMPAIGN PLAN</small><strong>How do you<br>grow and<br>scale<span>?</span></strong><i>PLAN × CREATE × REACH</i></div><div class="vc-orbit vc-one">AUDIENCE</div><div class="vc-orbit vc-two">ACTION</div></div>'
   }
 };
 const dialog = document.getElementById('service-dialog');

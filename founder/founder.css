@@ -119,3 +119,77 @@ body.belief-overlay-open{overflow:hidden}
     border-top:1px solid #555;
   }
 }
+
+
+/* Version 107 — Founder page copy and section rhythm */
+.next-chapter {
+  background: var(--soft);
+  color: var(--ink);
+}
+.next-chapter .eyebrow {
+  color: #777;
+}
+.next-grid h2 em {
+  color: var(--orange);
+}
+.next-copy p {
+  color: #65615a;
+}
+.next-copy .lead {
+  color: var(--ink);
+}
+.next-signoff {
+  border-top-color: var(--line);
+  color: #777;
+}
+.next-signoff strong {
+  color: var(--orange);
+}
+.next-chapter .button-light {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.next-chapter .button-light:hover {
+  color: var(--ink);
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+
+/* Version 108 — founder proof label and Section 04 sign-off */
+.next-signoff {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.next-signoff .next-signoff-right {
+  margin-left: auto;
+  text-align: right;
+  font: 8px 'DM Mono', monospace;
+  letter-spacing: .12em;
+  color: #777;
+}
+
+
+/* Version 109 — Section 04 column alignment */
+.next-grid {
+  align-items: start;
+}
+.next-grid .founder-overline {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+
+/* Version 110 — remove Section 04 overline and align headline with lead copy */
+.next-grid {
+  align-items: start;
+}
+.next-grid > div:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+.next-grid > div:first-child h2 {
+  margin-top: 0;
+}
